@@ -1,4 +1,6 @@
 yzernik.github.io
 =================
 
-My personal blog
+Source code for my personal blog.
+
+http://yzernik.github.io/
