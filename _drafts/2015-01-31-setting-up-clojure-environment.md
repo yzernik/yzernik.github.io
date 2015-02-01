@@ -28,7 +28,7 @@ My `.emacs.d` directory is loosely based on [another one][purcell-emacs-d] that 
 
 MELPA (*Milkypostman's ELPA or Milkypostman's Experimental Lisp Package Archive*) seems to be the most widely used Emacs package repository archive. So far, I have found every package I need [there][melpa].
 
-The `init-melpa.el` file is key because it bootstraps the package installation process by accessing the online package archive. It also contains one other important piece, which is a function called `require-package`. This will check if a given package is already installed, if its contents need to be refreshed, and if the `package-install` command should be run. This turns out to be much easier and more modular than manually running `package-install` on every new machine the config uses.
+The `init-melpa.el` file is key because it bootstraps the package installation process by accessing the online package archive. It also contains one other important piece, which is a function called `require-package`. This will check if a given package is already installed, if its contents need to be refreshed, and if the `package-install` command should be run. This turns out to be much easier and more portable than manually running `package-install` on every new machine that uses the config.
 
 With this infrastructure in place, I was able to create the configuration for the *major modes* that I will most commonly use. I have `tuareg` mode for OCaml, `ensime` for Scala, `markdown-mode` for editing Markdown such as this file I'm editing now, and of course, `clojure-mode`.
 
