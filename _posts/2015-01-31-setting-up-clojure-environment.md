@@ -46,11 +46,8 @@ re-downloaded in order to locate PACKAGE."
 ```
 
 
-With this infrastructure in place, I was able to create the configuration for the *major modes* that I will most commonly use. I have `tuareg` mode for OCaml, `ensime` for Scala, `markdown-mode` for editing Markdown such as this file I'm editing now, and of course, `clojure-mode`.
+With this infrastructure in place, I was able to create the configuration for the *major modes* that I will most commonly use. I have `tuareg` mode for OCaml, `ensime` for Scala, `markdown-mode` for editing Markdown, and of course, `clojure-mode`.
 
-## The REPL
-
-The REPL is one of the greatest things about working with Clojure and Emacs. I will discuss in my next post.
 
 
 [brave-and-true-emacs]:       http://www.braveclojure.com/basic-emacs/
