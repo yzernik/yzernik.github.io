@@ -127,6 +127,8 @@ print("Shutting down...")
 
 This worked flawlessy for a few months until the beginning of August, when Heroku changed their pricing policy. Because the bot is deployed on the free tier, it shuts down every day after 16 hours of activity, and restarts the next day.
 
+![A drunk tweet](/images/drunk-tweet.png)
+
 
 [socher-talk]:                      https://www.youtube.com/watch?v=tdLmf8t4oqM
 [track-param]:                      https://dev.twitter.com/streaming/overview/request-parameters#track
