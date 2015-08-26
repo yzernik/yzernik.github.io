@@ -56,6 +56,13 @@ hy tweetalyzer/train.hy > training_data.tsv
 
 and upload the TSV file to Metamind.
 
+Now I can see some useful statistics and features of the newly-trained classifier model:
+
+![Confusion Matrix](/images/tweetalyzer-model-1.png)
+![Scores](/images/tweetalyzer-model-2.png)
+![Features](/images/tweetalyzer-model-3.png)
+
+
 ### Making live predictions
 
 The chat-bot uses the same "sample" stream API to gather live tweets. It checks only the tweets that have text and are in english:
