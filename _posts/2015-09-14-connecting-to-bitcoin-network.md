@@ -3,7 +3,7 @@ layout: post
 title:  "Connecting to the Bitcoin network with Scala and Akka, Part 1"
 categories: jekyll update
 ---
-The Bitcoin network is made up of nodes that communicate over TCP using a [discrete set of message types][bitcoin-protocol]. Besides sending and receiving messages, a node in the [extended Bitcoin network][extended-network] can do other things at the same time, such as mining, validating transactions, running a wallet, etc.
+The Bitcoin network is made up of nodes that communicate over TCP using a [set of different message types][bitcoin-protocol]. Besides sending and receiving messages, a node in the [extended Bitcoin network][extended-network] can do other things at the same time, such as mining, validating transactions, running a wallet, etc.
 
 In the reference client implementation, there is one thread that handles socket communication and one thread that processes individual peer messages. Incoming peer messages are read into a `CDataStream` buffer for each connected node, which is then processed using the [`ProcessMessage`][process-message] function. `ProcessMessage` deserializes messages as they are being processed.
 
@@ -15,7 +15,7 @@ That is why I created a separate libary called [bitcoin-scodec][bitcoin-scodec]
 
 I use the `scodec` library to define the codec that will encode and decode messages.
 
-In the Bitcoin protocol, there is a common message header at the beginning of the message that includes a command string that tells the type of message payload that will follow. I will need to create a polymorphic codec so that I can handle messages containing all of the different payload types. This is possible using a [`Companion Type System`][companion-type], following the example given by Kifi.
+In the Bitcoin protocol, there is a common message header at the beginning of each message that includes a command string that tells the type of payload that will follow. I will need to create a polymorphic codec so that I can handle messages containing all of the different payload types. This is possible using a [`Companion Type System`][companion-type], following the example given by Kifi.
 
 I start by defining a message trait:
 
