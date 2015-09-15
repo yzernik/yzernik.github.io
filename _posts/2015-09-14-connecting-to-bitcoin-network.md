@@ -117,7 +117,7 @@ object GetAddr extends MessageCompanion[GetAddr] {
 
 ## The Akka Extension
 
-Now that I have the codec to serialize and deserialize peer messages, I can create the TCP peer connections to other nodes in the Bitcoin network.
+Now that I have the codec to serialize and deserialize peer messages, I can create the TCP [peer connections to other nodes][btc-io] in the Bitcoin network.
 
 The Akka library includes a useful extension for creating TCP connections. It handles the low-level resources, and provides a simple interface for receiving and sending data. My goal is to create a second Akka extension, on top of the existing TCP extension, that will send and receive Bitcoin messages instead of raw binary data.
 
@@ -249,3 +249,4 @@ The nice thing about this representation is that the same exact receive methods 
 [companion-type]:   http://eng.kifi.com/reflections-on-companion-type-systems/
 [bitcoin-scodec]:   https://github.com/yzernik/bitcoin-scodec
 [peer-handshake]:   https://github.com/aantonop/bitcoinbook/blob/develop/ch06.asciidoc#network_handshake
+[btc-io]:           https://github.com/yzernik/btc-io
