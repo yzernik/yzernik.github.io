@@ -206,9 +206,8 @@ def receive: Receive = {
 
 def awaitingVersion: Receive = {
   case IncomingMessage(remoteV: Version) =>
-    if (inbound) {
+    if (inbound)
       socketHandler ! OutgoingMessage(localV)
-    }
     socketHandler ! OutgoingMessage(Verack())
     context.become(awaitingVerack(remoteV))
   case ConnectTimeout =>
