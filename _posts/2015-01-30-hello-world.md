@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Hello World!"
-categories: jekyll update
+tags: blog
 ---
 This is my blog, where I will post my thoughts about different things, as a record for myself and others to read.
 

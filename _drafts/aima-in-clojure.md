@@ -1,6 +1,7 @@
 ---
 layout: post
-title:  "A Sample Draft Post"
-tags: jekyll update
+title:  "AIMA in Clojure"
+tags: clojure
 ---
+
 This is a sample draft post.

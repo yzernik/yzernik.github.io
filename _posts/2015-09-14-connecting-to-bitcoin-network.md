@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Connecting to the Bitcoin network with Scala, Akka, and scodec"
-categories: jekyll update
+tags: bitcoin scala
 ---
 The Bitcoin network is made up of nodes that communicate over TCP using a [set of different message types][bitcoin-protocol]. Besides sending and receiving messages, a node in the [extended Bitcoin network][extended-network] can do other things at the same time, such as mining, validating transactions, running a wallet, etc.
 

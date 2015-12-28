@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Detecting Drunk Tweets with Deep Learning"
-categories: jekyll update
+tags: twitter heroku hy
 ---
 
 In [this talk][socher-talk] by Richard Socher of MetaMind, he shows some of the amazing things that neural networks can do for image recognition and text sentiment analysis.

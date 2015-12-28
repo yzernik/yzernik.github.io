@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Setting up Emacs for Clojure"
-categories: jekyll update
+tags: clojure emacs
 ---
 
 Now that I am learning Clojure, I need to have a properly configured environment for Clojure development.
