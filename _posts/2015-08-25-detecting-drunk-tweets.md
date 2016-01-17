@@ -4,15 +4,19 @@ title:  "Detecting Drunk Tweets with Deep Learning"
 tags: twitter heroku hy
 ---
 
-In [this talk][socher-talk] by Richard Socher of MetaMind, he shows some of the amazing things that neural networks can do for image recognition and text sentiment analysis.
+The Metamind API, described [here][socher-talk] by Richard Socher, can
+ be used for some interesting applications, like stock-trading bots. Instead
+ of doing that, I decided to build a Twitter bot that detects drunk tweets.
 
-It inspired me to play around with the Metamind API and try to do something useful with it. I eventually decided on a Twitter bot that detects drunk tweets.
-
-My original plan was to use Clojure for this project, but the MetaMind API only provides a Python library, so I decided to compromise and use Hy, a dialect of Lisp that uses Python. This way I can use the MetaMindApi Python library, the Twitter Python library, and still have fun with Clojure-like syntax.
+My original plan was to use Clojure for this project, but the MetaMind API
+ only provides a Python client library, so I decided to compromise and use
+ Hy, a dialect of Lisp that uses Python. This way I can use the MetaMindApi
+Python library, the Twitter Python library, and still have fun with
+ Clojure-like syntax.
 
 ### Methodology
 
-The Tweetalyzer bot consists of two parts - a program that scrapes Twitter and generates labeled training data, and the bot itself that listens to live tweets, classifies them, and responds if they appear to be drunk.
+The Tweetalyzer bot has two parts - a program that scrapes Twitter and generates labeled training data, and the bot itself that listens to live tweets, classifies them, and responds if they appear to be drunk.
 
 The trick I use to get labeled drunk tweets is to search for tweets containing the phrase "you're drunk", or some variation of that. Once I've subscribed to this stream of "drunk reply tweets", I inspect each one for the `in_reply_to_status_id` attribute to get the original tweet. This gives me a stream of human-labeled drunk tweets. I also sample random tweets from the original stream to use as my baseline non-drunk tweets.
 
