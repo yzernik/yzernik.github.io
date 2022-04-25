@@ -181,13 +181,9 @@ When a user creates a squeak, the following happens:
 * An encryption/decryption key is generated as a random scalar value.
 * A random initialization vector is generated.
 * The post content is encrypted with a symmetric-key algorithm using the encryption key and the initialization vector.
-* A hash is calculated over the encrypted ciphertext.
 * The payment point is calculated from the encryption key scalar value on an elliptic curve.
 * A new nonce is generated.
 * The public key of the author is derived from their private key.
-
-Also,
-
 * The latest block height and block hash are fetched from the Bitcoin blockchain.
 * The hash of another squeak (to make a reply) can also be provided by the author.
 
