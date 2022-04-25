@@ -158,7 +158,6 @@ There are two components in a squeak:
 
 A squeak header has the following fields:
 
-{{< table "table table-dark table-striped table-bordered" >}}
 | Field Size | Description | Data type | Comments |
 |---|---|---------|--------|
 |4 | nVersion | int32_t | Squeak version information
@@ -172,7 +171,6 @@ A squeak header has the following fields:
 |32 | recipientPubKey | char[32] | Contains the public key of the recipient if squeak is a private message
 |33 | paymentPoint | char[33] | The payment point of the squeak derived from the decryption key on the secp256k1 curve.
 |16 | iv | char[16] | Random bytes used for the initialization vector
-{{< /table >}}
 
 There is also a squeak hash, which is derived from the bytes of the squeak header using SHA256.
 
