@@ -58,7 +58,8 @@ the content.
 <!-- In the current implementation of Lightning in LND (using HTLCs), the preimage -->
 <!-- would be specified in the `r_preimage` field of the `AddInvoice` RPC method. -->
 
-{{< center-figure src="/post-data/trustless-lightning-payments/htlc-example-4.png" height=600 width=600 >}}
+![HTLC Example](/images/htlc-example-4.png)
+
 
 Unfortunately, this approach requires the consumer to trust the honesty of the
 content seller. A malicious seller could create an invoice using an invalid
@@ -86,7 +87,7 @@ So now that we know that PTLC invoices use elliptic curve points, we can
 take advantage of the distributive property of scalar multiplication
 on elliptic curve points:
 
-$$ (s1 + s2)\*G = s1\*G + s2\*G $$
+$$ (s1 + s2)*G = s1*G + s2*G $$
 
 where $$s1$$ and $$s2$$ are scalars, and $$G$$ is an elliptic curve generator point.
 
@@ -109,7 +110,7 @@ If Carol tries to give Bob an invalid invoice, Bob will know before he pays the 
 
 The above example assumes that Bob is able to trust that the value of $$p1$$ is valid.
 
-{{< center-figure src="/post-data/trustless-lightning-payments/ptlc-example-3.png" height=600 width=600 >}}
+![PTLC Example](/images/ptlc-example-3.png)
 
 Now any node in the network can relay content from any creator, and earn a profit by
 selling it trustlessly to any consumer. The consumer does not have to trust that the
@@ -132,18 +133,18 @@ contains enough information to display in a timeline UI.
 
 A newly downloaded squeak will display as locked:
 
-{{< center-figure src="/post-data/trustless-lightning-payments/locked-squeak.png" height=600 width=600 >}}
+![Locked Squeak](/images/locked-squeak.png)
 
 If the consumer then clicks the "buy" button, they will be presented with an invoice
 from the seller (the seller can be any other node in the network has has a copy of the
 secret key):
 
-{{< center-figure src="/post-data/trustless-lightning-payments/received-offer.png" height=600 width=600 >}}
+![Received Offer](/images/received-offer.png)
 
 Then, if the consumer decides that the squeak is worth the price, they can pay the
 invoice to unlock the squeak:
 
-{{< center-figure src="/post-data/trustless-lightning-payments/unlocked-squeak.png" height=600 width=600 >}}
+![Unlocked Squeak](/images/unlocked-squeak.png)
 
 The consumer now has a copy of the unlocked squeak on their own node, and
 they can now re-sell the squeak to other nodes in the network.
