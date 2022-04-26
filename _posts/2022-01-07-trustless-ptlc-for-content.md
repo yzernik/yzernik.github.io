@@ -52,7 +52,7 @@ payment to get access to the content.
 A naive approach to accomplish this would be to simply encrypt the content,
 and then create a Lightning invoice with the decryption key as the invoice
 preimage (using HTLCs), and share the invoice with the consumer. Then, when the consumer
-pays the invoice, they would obtain the decryption key, and use it to unlock
+pays the invoice, they would obtain the preimage as the decryption key, and use it to unlock
 the content.
 
 <!-- In the current implementation of Lightning in LND (using HTLCs), the preimage -->
