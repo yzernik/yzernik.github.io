@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Using PTLC's for trustless payments"
+title:  "Using PTLC's to trustlessly incentivize sharing content"
 tags: Bitcoin, Lightning, PTLC
 usemathjax: true
 ---
