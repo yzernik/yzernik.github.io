@@ -96,7 +96,7 @@ The basic idea for selling content is as follows:
 * Alice has a piece of content she wants to sell to multiple buyers.
 * Alice generates a scalar value $$s1$$ to use as a symmetric encryption/decryption key, and encrypts the content.
 * Alice calculates the point $$p1$$ on an elliptic curve $$G$$ by calculating $$p1 = s1*G$$.
-* Alice makes $$p1$$ publicly available for anyone interested in buying the content.
+* Alice makes $$p1$$ publicly available for anyone interested in buying the content. The value of $$p1$$ is publicly endorsed by Alice, so if it turns out to be incorrect, her reputation will be damaged.
 * Alice shares the encrypted content with a relay named Carol.
 * Bob downloads the encrypted content from Carol, and requests an invoice to unlock the content.
 * Carol generates a new scalar value $$s2$$, and creates a *PTLC* Lightning invoice with $$s1 + s2$$ as the preimage.
@@ -107,8 +107,6 @@ The basic idea for selling content is as follows:
 * Bob calculates $$s1 = (s1 + s2) - s2$$ to get the decryption key, and decrypts the content.
 
 If Carol tries to give Bob an invalid invoice, Bob will know before he pays the invoice.
-
-The above example assumes that Bob is able to trust that the value of $$p1$$ is valid.
 
 ![PTLC Example](/images/ptlc-example-3.png)
 
