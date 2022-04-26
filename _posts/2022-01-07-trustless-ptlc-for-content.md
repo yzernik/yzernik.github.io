@@ -73,7 +73,7 @@ This might be true if the seller is a large, reputable institution, but this
 model breaks down if we try to extend it to a peer-to-peer decentralized
 network, where all connections are assumed to be trustless.
 
-#### Making payments trustless with PTLCs
+#### Paying for content trustlessly with PTLCs
 
 Fortunately, there is a way to make the payment trustless for both the buyer
 and the seller, but it requires that Lightning use PTLC payment channels.
